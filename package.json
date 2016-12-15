@@ -1,3 +1,10 @@
 {
-  "private": true
+  "private": true,
+  "scripts": {
+    "eslint": "eslint",
+    "lint": "npm run eslint -- ."
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2"
+  }
 }
