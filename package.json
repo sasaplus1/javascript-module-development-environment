@@ -2,9 +2,11 @@
   "private": true,
   "scripts": {
     "eslint": "eslint",
+    "fixpack": "fixpack",
     "lint": "npm run eslint -- ."
   },
   "devDependencies": {
-    "eslint": "^3.12.2"
+    "eslint": "^3.12.2",
+    "fixpack": "^2.3.1"
   }
 }
