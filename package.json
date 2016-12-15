@@ -15,8 +15,12 @@
   "private": true,
   "readmeFilename": "README.md",
   "scripts": {
+    "build": "npm run compile && npm run minify",
+    "compile": "npm run webpack -- --output-filename ${npm_package_name}.js",
     "eslint": "eslint",
     "fixpack": "fixpack",
-    "lint": "npm run eslint -- ."
+    "lint": "npm run eslint -- .",
+    "minify": "npm run webpack -- --optimize-minimize --output-filename ${npm_package_name}.min.js",
+    "webpack": "webpack --colors --display-error-details --progress"
   }
 }
