@@ -14,6 +14,10 @@
   "main": "./index.js",
   "private": true,
   "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sasaplus1-prototype/name.js.git"
+  },
   "scripts": {
     "build": "npm run compile && npm run minify",
     "compile": "npm run webpack -- --output-filename ${npm_package_name}.js",

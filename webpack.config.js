@@ -6,6 +6,7 @@ const webpack = require('webpack');
 
 const {
   name,
+  repository,
   version,
 } = require('./package');
 
@@ -61,6 +62,7 @@ module.exports = {
     new webpack.optimize.AggressiveMergingPlugin,
     new webpack.BannerPlugin([
       `@license ${name}.js ver.${version} Copyright(c) 2016 sasa+1`,
+      repository.url.replace(/\.git$/i, ''),
       'Released under the MIT license.',
     ].join('\n'), {
       options: {
