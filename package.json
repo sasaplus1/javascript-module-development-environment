@@ -11,6 +11,7 @@
     "fixpack": "^2.3.1",
     "webpack": "^1.14.0"
   },
+  "license": "MIT",
   "main": "./index.js",
   "private": true,
   "readmeFilename": "README.md",
