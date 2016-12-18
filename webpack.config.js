@@ -33,12 +33,6 @@ module.exports = {
     root: path.join(__dirname, 'node_modules'),
   },
 
-  module: {
-    loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-    ],
-  },
-
   node: {
     Buffer: false,
     process: false,
