@@ -29,6 +29,24 @@ module.exports = {
     libraryTarget: 'umd',
   },
 
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        exclude: /node_modules/,
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'eslint-loader',
+            options: {
+              emitWarning: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+
   node: {
     Buffer: false,
     process: false,
