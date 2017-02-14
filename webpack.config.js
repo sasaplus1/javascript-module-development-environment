@@ -29,10 +29,6 @@ module.exports = {
     libraryTarget: 'umd',
   },
 
-  resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
-  },
-
   node: {
     Buffer: false,
     process: false,
@@ -40,29 +36,22 @@ module.exports = {
 
   resolve: {
     extensions: [
-      '',
       '.js',
-    ],
-    modulesDirectories: [
-      'node_modules',
     ],
   },
 
   plugins: [
-    new webpack.NoErrorsPlugin,
+    new webpack.NoEmitOnErrorsPlugin,
     new webpack.IgnorePlugin(/vertx/),
-    new webpack.optimize.OccurenceOrderPlugin,
-    new webpack.optimize.DedupePlugin,
     new webpack.optimize.AggressiveMergingPlugin,
-    new webpack.BannerPlugin([
-      `@license ${name}.js ver.${version} Copyright(c) 2016 sasa+1`,
-      repository.url.replace(/\.git$/i, ''),
-      'Released under the MIT license.',
-    ].join('\n'), {
-      options: {
-        raw: false,
-        entryOnly: true,
-      },
+    new webpack.BannerPlugin({
+      banner: [
+        `@license ${name}.js ver.${version} Copyright(c) 2016 sasa+1`,
+        repository.url.replace(/\.git$/i, ''),
+        'Released under the MIT license.',
+      ].join('\n'),
+      entryOnly: true,
+      raw: false,
     })
   ],
 

@@ -6,7 +6,7 @@
   "devDependencies": {
     "eslint": "^3.12.2",
     "fixpack": "^2.3.1",
-    "webpack": "^1.14.0"
+    "webpack": "^2.2.1"
   },
   "license": "MIT",
   "main": "./index.js",
@@ -24,7 +24,7 @@
     "export": "git archive HEAD | tar x - -C",
     "fixpack": "fixpack",
     "lint": "npm run eslint -- .",
-    "minify": "NODE_ENV=production npm run webpack -- --optimize-minimize --output-filename ${npm_package_name}.min.js",
+    "minify": "npm run webpack -- --optimize-minimize --output-filename ${npm_package_name}.min.js",
     "webpack": "webpack --colors --display-error-details --progress"
   }
 }
