@@ -42,7 +42,6 @@ module.exports = {
 
   plugins: [
     new webpack.NoEmitOnErrorsPlugin,
-    new webpack.IgnorePlugin(/vertx/),
     new webpack.optimize.AggressiveMergingPlugin,
     new webpack.BannerPlugin({
       banner: [
