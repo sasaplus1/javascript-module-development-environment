@@ -25,7 +25,7 @@
     "export": "git archive HEAD | tar x - -C",
     "fixpack": "fixpack",
     "lint": "npm run eslint -- .",
-    "minify": "npm run webpack -- --optimize-minimize --output-filename ${npm_package_name}.min.js",
+    "minify": "NODE_ENV=production npm run webpack -- --optimize-minimize --output-filename ${npm_package_name}.min.js",
     "webpack": "webpack --colors --display-error-details --progress"
   }
 }
