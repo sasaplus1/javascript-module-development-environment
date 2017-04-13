@@ -21,7 +21,7 @@
     "compile": "npm run webpack -- --output-filename ${npm_package_name}.js",
     "develop": "npm run webpack -- --devtool inline-source-map --watch --output-filename ${npm_package_name}.js",
     "eslint": "eslint",
-    "export": "git archive HEAD | tar x - -C",
+    "export": "git archive --worktree-attributes HEAD | tar x - -C",
     "fixpack": "fixpack",
     "lint": "npm run eslint -- .",
     "minify": "NODE_ENV=production npm run webpack -- --optimize-minimize --output-filename ${npm_package_name}.min.js",
