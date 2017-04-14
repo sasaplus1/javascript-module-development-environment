@@ -2,6 +2,49 @@
 
 my JavaScript module development environment
 
+## Setup
+
+export template to target directory:
+
+```sh
+$ npm run export -- /path/to/dir
+```
+
+install dependencies:
+
+```sh
+$ cd /path/to/dir
+$ npm install
+```
+
+## npm-scripts
+
+### develop
+
+develop module:
+
+```sh
+$ npm run develop
+```
+
+execute webpack with `--watch` option.
+
+### build
+
+build bundled script and minified script:
+
+```sh
+$ npm run build
+```
+
+### lint
+
+lint with eslint:
+
+```sh
+$ npm run lint
+```
+
 ## License
 
 ```
